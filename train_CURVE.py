@@ -20,7 +20,7 @@ train_epochs = 500
 
 
 def train(args):
-    img_size = (640, 640)
+    img_size = (512, 512)
     batch_size = args.batch_size
     dataset = CurveDataset(img_size, crop=True, light=True, rotate=True, filp=True, noise=True, color=True)
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
